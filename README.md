@@ -4,6 +4,8 @@
 
 [It is recommended to delete/replace the sections that are included in the brackets, since they contain guidelines on how to fill the README file, and are not meant to be included in the final version of the README.]
 
+[For an example of a completed README file, you can refer to the project [ModelExposureAssessment](https://github.com/carcutter/ModelExposureAssessment)]
+
 ## Overview
 
 [Insert a brief description of the project here, explaining its purpose and functionality.]
