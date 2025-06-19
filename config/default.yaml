@@ -1,0 +1,38 @@
+model:
+  backbone: EfficientNetV2B0
+  image_size: [256, 256]  # Width, Height of input images
+  dropout_rate: 0.2  # Dropout rate for the classifier
+  num_classes: 2
+  activation_function: softmax
+  # Add other parameters as needed
+
+training:
+  batch_size: 128
+  epochs: 50
+  lr: 1e-5
+  metrics: ["accuracy", "precision"]
+  val_split: 0.1
+  freeze_backbone: False
+  # Add other parameters as needed
+
+data:
+  train:
+    base_dir: "[TRAIN_DIR]"
+  test:
+    base_dir: "[TEST_DIR]"
+  output_dir: "output"
+  class_names: ["no-issue", "issue"]
+  # Add other parameters as needed
+
+logs:
+  project_name: "" # Name of the project in wandb (ideally it is the same as the project name)
+  entity: "meero" # Your wandb entity (username or team name)
+  wandb: True
+  run_name: "[PLACEHOLDER]"
+  wandb_dir: "logs"
+  verbose: full # full, minimal, none
+  # Add other parameters as needed
+
+conversion:
+  quantization: int8
+  # Add other parameters as needed
